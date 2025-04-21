@@ -18,7 +18,7 @@ type ToolContextType = {
   addRecentTool: (tool: Tool) => void;
   setFilteredTools: React.Dispatch<React.SetStateAction<Tool[]>>;
   loading: boolean;
-  error: string | null; // Variável de erro
+  error: string | null;
   toggleFavoriteTool: (tool: Tool) => void;
   favoriteTools: Tool[];
   attFavoriteTools: (tools: Tool[]) => void;
@@ -38,7 +38,7 @@ export const ToolProvider = ({ children }: { children: React.ReactNode }) => {
   const [filteredTools, setFilteredTools] = useState<Tool[]>([]);
   const [loading, setLoading] = useState(true);
   const [favoriteTools, setFavoriteTools] = useState<Tool[]>([]);
-  const [error, setError] = useState<string | null>(null); // Estado para erro
+  const [error, setError] = useState<string | null>(null);
 
   const fetchTools = async () => {
     setLoading(true);

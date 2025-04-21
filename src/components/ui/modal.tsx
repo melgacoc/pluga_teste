@@ -3,6 +3,7 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { ITool } from "@/interfaces/ITool";
 import { Heart } from "lucide-react";
+import React from 'react'
 
 export default function ToolModal({ tool, open, onClose }: { tool: ITool, open: boolean, onClose: () => void }) {
   const { recentTools, addRecentTool, favoriteTools, toggleFavoriteTool } = useToolContext();

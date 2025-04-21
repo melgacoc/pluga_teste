@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useToolContext } from "../../context/context";
 import { Input } from "@/components/ui/input";
 import { Heart } from "lucide-react";
+import React from 'react'
 
 export default function ToolFilter() {
   const { tools, setFilteredTools, filteredTools, favoriteTools } = useToolContext();

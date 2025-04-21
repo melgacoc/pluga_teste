@@ -1,6 +1,8 @@
+import React from 'react'
+
 export function ToolTableSkeleton() {
     return (
-      <div className="p-4">
+      <div className="p-4" data-testid="skeleton-table">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {Array.from({ length: 12 }).map((_, index) => (
             <div

@@ -4,6 +4,7 @@ import ToolModal from "./modal";
 import ToolFilter from "./filter";
 import { ITool } from "@/interfaces/ITool";
 import { Heart } from "lucide-react";
+import React from 'react'
 
 const ITEMS_PER_PAGE = 12;
 
@@ -30,7 +31,7 @@ export default function ToolTable() {
     <div className="p-4">
       <ToolFilter />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" data-testid="tool-table">
         {paginatedData.map((tool: ITool) => (
           <div
             key={tool.app_id}

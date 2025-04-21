@@ -5,6 +5,7 @@ import Header from './components/ui/header'
 import Footer from './components/ui/footer'
 import { ToolProvider, useToolContext } from './context/context'
 import ErrorComponent from './components/ui/error'
+import React from 'react'
 
 function AppContent() {
   const { loading, error } = useToolContext();

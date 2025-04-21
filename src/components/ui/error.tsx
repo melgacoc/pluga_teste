@@ -6,7 +6,7 @@ type ErrorComponentProps = {
 
 const ErrorComponent: React.FC<ErrorComponentProps> = ({ message }) => {
   return (
-    <div className="error-message">
+    <div className="error-message" data-testid="error-component">
       <p>{message}</p>
     </div>
   );
