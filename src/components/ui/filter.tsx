@@ -40,10 +40,10 @@ export default function ToolFilter() {
           />
           <button
             onClick={() => setShowFavorites((prev) => !prev)}
-            className="w-10 h-10 flex items-center justify-center bg-gray-400 hover:bg-gray-500 rounded-full"
+            className="w-12 h-10 flex items-center justify-center bg-gray-400 hover:bg-gray-500 rounded-full"
           >
             {showFavorites ? (
-              <Heart className="w-5 h-5 text-red-500 fill-red-500" />
+              <Heart className="w- h-5 text-red-500 fill-red-500" />
             ) : (
               <Heart className="w-5 h-5 text-white" />
             )}

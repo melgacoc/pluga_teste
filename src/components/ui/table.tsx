@@ -28,7 +28,7 @@ export default function ToolTable() {
   );
 
   return (
-    <div className="p-4">
+    <div className="p-4 w-[70%] mx-auto">
       <ToolFilter />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" data-testid="tool-table">

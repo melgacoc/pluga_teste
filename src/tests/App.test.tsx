@@ -65,4 +65,17 @@ describe('App Component', () => {
 
     expect(screen.getByText(mock[0].name)).toBeInTheDocument();
   });
+
+  it('deve renderizar ToolTable com os dados filtrados', () => {
+    (useToolContext as jest.Mock).mockReturnValue(getMockContext({
+      tools: mock,
+      filteredTools: [mock[0]],
+    }));
+    render(<App />);
+    expect(screen.getByTestId('tool-table')).toBeInTheDocument();
+    expect(screen.queryByTestId('skeleton-table')).toBeNull();
+    expect(screen.queryByTestId('error-component')).toBeNull();
+
+    expect(screen.getByText(mock[0].name)).toBeInTheDocument();
+  });
 });
